@@ -11,7 +11,7 @@ self.addEventListener('activate', function() {
 
 self.addEventListener('fetch', function(event) {
   // Skip MSW initialization during service worker registration
-  if (event.request.url.includes('/mockServiceWorker.js')) {
+  if (event.request.url && event.request.url.includes('/mockServiceWorker.js')) {
     return
   }
 
