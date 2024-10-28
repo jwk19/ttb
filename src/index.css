@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-primary {
+  @apply bg-cyan-600;
+}
+
+.text-primary {
+  @apply text-cyan-600;
+}
+
+.border-primary {
+  @apply border-cyan-600;
+}
+
+.hover:bg-primary-dark:hover {
+  @apply hover:bg-cyan-700;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .mobile-container {
+    @apply px-4 py-6;
+  }
+
+  .mobile-card {
+    @apply bg-white rounded-lg shadow-md p-4 mb-4;
+  }
+
+  .mobile-title {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  .mobile-text {
+    @apply text-sm text-gray-600;
+  }
+
+  .mobile-button {
+    @apply w-full bg-primary text-white py-2 px-4 rounded-md text-center font-medium mt-4;
+  }
+
+  /* Add padding to the bottom of the main content to account for the bottom navigation */
+  main {
+    padding-bottom: 5rem;
+  }
+}
+
+/* Improve scrolling on mobile */
+@media (max-width: 767px) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .overflow-y-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
